@@ -1,0 +1,602 @@
+a {
+    text-decoration: none;   /* removes underline */
+    color: inherit;          /* keeps normal text color */
+}
+
+a:hover {
+    color: blue;
+}
+
+
+body {
+    font-family: Arial;
+    background: #f5f5f5;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: white;
+
+position: sticky;
+    top: 0;
+    z-index: 1000; /* Keeps it above everything else */
+    border-bottom: 1px solid #eee;
+}
+
+.search-bar {
+    display: flex;
+}
+
+.search-bar input,
+.search-bar select {
+    padding: 8px;
+}
+
+.search-bar button {
+    background: blue;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+}
+
+/* NAV */
+.nav {
+    background: white;
+    padding: 10px 30px;
+    display: flex;
+    gap: 20px;
+position: sticky;
+    top: 66px;     /* This should be the height of your header so they stack */
+    z-index: 999;
+    border-bottom: 1px solid #eee;
+}
+
+/* HERO */
+.hero {
+    display: grid;
+    grid-template-columns: 200px 1fr 250px;
+    gap: 15px;
+    padding: 20px;
+}
+
+/* SIDEBAR */
+.sidebar {
+    background: white;
+    padding: 15px;
+}
+
+/* BANNER */
+.banner {
+    background: #bdebe4;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+/* RIGHT */
+.right-cards .card {
+    background: white;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.orange {
+    background: orange;
+    color: white;
+}
+
+.blue {
+    background: #4da6ff;
+    color: white;
+}
+
+/* DEALS */
+.deals {
+    background: white;
+    padding: 20px;
+    margin: 20px;
+}
+
+.deal-grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* PRODUCTS */
+.products {
+    padding: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.product {
+    background: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* BIG BANNER */
+.big-banner {
+    background: linear-gradient(to right, blue, green);
+    padding: 50px;
+    color: white;
+}
+
+.form input {
+    padding: 10px;
+    margin: 5px;
+}
+
+/* SERVICES */
+.services {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+}
+
+.service {
+    background: white;
+    padding: 20px;
+    flex: 1;
+}
+
+
+
+/* FLAGS CONTAINER */
+.flags {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+    padding: 20px;
+}
+
+.flag {
+    background: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Stacks the image on top of the text */
+    align-items: center;    /* Centers both image and text horizontally */
+    text-align: center;     /* Centers the text lines */
+    gap: 12px;              /* Space between the image and the text */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.flag img {
+    width: 50px;            /* Set a consistent size for the icons */
+    height: auto;
+}
+
+
+/* FOOTER */
+.footer{
+display:flex;
+justify-content:space-around;
+background:#111;
+color:white;
+padding:40px;
+}
+
+
+
+
+/* TECH PAGE CSS */
+
+/* TECH PAGE */
+.tech-page {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* FILTERS */
+.filters {
+    background: white;
+    padding: 20px;
+}
+
+.filters h3 {
+    margin-top: 15px;
+}
+
+.filters p {
+    margin: 5px 0;
+}
+
+.filters .active {
+    color: blue;
+}
+
+/* PRODUCT LIST */
+.product-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* LIST ITEM */
+.list-item {
+    display: flex;
+    gap: 20px;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.list-item img {
+    width: 120px;
+}
+
+.price {
+    color: red;
+    font-weight: bold;
+}
+
+.list-item {
+    display: flex;
+    gap: 20px;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.list-item div {
+    flex: 1;
+}
+
+
+
+/* 1. Ensure the grid container allows the sidebar to float */
+.tech-page {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 20px;
+    padding: 20px;
+    align-items: start; /* CRITICAL: Prevents the sidebar from stretching to the full page height */
+}
+
+/* 2. Adjust the sticky position to account for the Header + Nav */
+.filters {
+    background: white;
+    padding: 20px;
+    border-radius: 8px; /* Matching your style */
+
+    position: sticky; 
+       top: 136px; 
+    
+    height: fit-content; /* Only takes up as much space as the text inside */
+    z-index: 10; /* Lower than header/nav but higher than products */
+}
+
+
+
+/* PRODUCT DETAILS */
+
+
+/* PRODUCT DETAIL */
+.product-detail {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    padding: 30px;
+}
+
+.detail-left img {
+    width: 100%;
+    background: white;
+    padding: 20px;
+}
+
+.detail-center {
+    background: white;
+    padding: 20px;
+}
+
+.detail-right {
+    background: white;
+    padding: 20px;
+}
+
+.buy {
+    background: orange;
+    color: white;
+    padding: 10px;
+    border: none;
+}
+
+.cart {
+    background: blue;
+    color: white;
+    padding: 10px;
+    border: none;
+}
+
+
+
+/* DETAIL PAGE */
+.detail-container {
+    display: grid;
+    grid-template-columns: 1.2fr 2fr 1fr;
+    gap: 20px;
+    padding: 30px;
+}
+
+.images {
+    background: white;
+    padding: 20px;
+}
+
+.main-img {
+    width: 100%;
+}
+
+.thumbs {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.thumbs img {
+    width: 60px;
+    cursor: pointer;
+}
+
+.info {
+    background: white;
+    padding: 20px;
+}
+
+.stock {
+    color: green;
+}
+
+.rating {
+    margin: 10px 0;
+}
+
+.price-box {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.price-box div {
+    background: #f5f5f5;
+    padding: 10px;
+    text-align: center;
+}
+
+.details {
+    margin-top: 15px;
+}
+
+.supplier {
+    background: white;
+    padding: 20px;
+}
+
+.send {
+    background: blue;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.profile {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+/* DESCRIPTION */
+.desc-section {
+    background: white;
+    margin: 20px;
+    padding: 20px;
+}
+
+/* RELATED */
+.related {
+    padding: 20px;
+}
+
+.related-grid {
+    display: flex;
+    gap: 15px;
+}
+
+.related-grid img {
+    width: 100px;
+}
+
+
+
+.images {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the image and buttons */
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.main-img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px; /* Space between image and buttons */
+    object-fit: contain;
+}
+
+
+
+
+
+/* CHECKOUT */
+
+.checkout-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.checkout-left, .checkout-right {
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.cart-item {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.item-img-box {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-img-box img { max-width: 80%; }
+
+.item-details { flex: 2; }
+.btn-remove { color: red; border: 1px solid #ddd; background: none; padding: 5px; cursor: pointer; border-radius: 4px; }
+.btn-later { color: blue; border: 1px solid #ddd; background: none; padding: 5px; cursor: pointer; border-radius: 4px; margin-left: 5px;}
+
+.summary-line { display: flex; justify-content: space-between; margin: 10px 0; }
+.summary-total { display: flex; justify-content: space-between; font-weight: bold; font-size: 1.2rem; margin-top: 10px; }
+.btn-checkout { width: 100%; background: #00b517; color: white; border: none; padding: 15px; border-radius: 8px; font-size: 1rem; margin-top: 20px; cursor: pointer; }
+
+.text-red { color: red; }
+.text-green { color: green; }
+
+.coupon-input { display: flex; margin-top: 10px; }
+.coupon-input input { flex: 1; padding: 8px; border: 1px solid #ddd; }
+.coupon-input button { background: white; border: 1px solid blue; color: blue; padding: 8px; }
+
+
+
+
+
+
+
+/* RESPOSIVE */
+
+* {
+    box-sizing: border-box;
+}
+
+/* 2. Tablet Mode (Screens smaller than 1024px) */
+@media (max-width: 1024px) {
+    /* Hero Section: Adjust Sidebar, Banner, Right Cards */
+    .hero {
+        grid-template-columns: 1fr 1fr; /* Remove the 200px sidebar to the side */
+    }
+    .sidebar { display: none; } /* Hide small sidebar on tablet to save space */
+
+    /* Product Grids: 4 columns becomes 2 */
+    .grid, .flags {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Detail Page: 3 columns becomes 2 */
+    .product-detail, .detail-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    .detail-right, .supplier { grid-column: span 2; } /* Move sidebar to bottom */
+
+    /* Tech Page */
+    .tech-page {
+        grid-template-columns: 200px 1fr;
+    }
+}
+
+/* 3. Mobile Mode (Screens smaller than 768px) */
+@media (max-width: 768px) {
+    /* Header & Nav */
+    .header {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .nav {
+        top: 130px; /* Adjust sticky position for taller mobile header */
+        overflow-x: auto; /* Allow menu to scroll sideways if too long */
+        white-space: nowrap;
+        gap: 10px;
+    }
+
+    /* Hero & Tech Page: Everything becomes 1 column */
+    .hero, .tech-page, .product-detail, .detail-container, .checkout-container {
+        grid-template-columns: 1fr !important;
+        padding: 10px;
+    }
+
+    .filters {
+        position: static; /* Remove sticky on mobile */
+        margin-bottom: 20px;
+    }
+
+    /* Product Grids: 1 column */
+    .grid, .flags, .deal-grid, .services, .related-grid {
+        grid-template-columns: 1fr !important;
+        flex-direction: column;
+    }
+
+    /* List Items (Tech Page) */
+    .list-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    .list-item img {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    /* Footer */
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    /* Banner & Hero Text */
+    .banner, .big-banner {
+        padding: 20px;
+        text-align: center;
+    }
+
+    /* Checkout */
+    .cart-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* 4. Extra Small (Phones smaller than 480px) */
+@media (max-width: 480px) {
+    .search-bar {
+        width: 100%;
+    }
+    .search-bar input {
+        width: 60%;
+    }
+}
